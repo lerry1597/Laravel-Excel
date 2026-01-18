@@ -13,7 +13,7 @@ Anda sekarang memiliki fork Laravel-Excel versi 2.1.0 yang sudah:
 
 ## 🚀 Langkah Implementasi
 
-### Opsi A: Menggunakan Tag Version (Recommended)
+### Opsi A: Menggunakan Branch dengan Alias (Recommended)
 
 **1. Update `composer.json` di project Laravel Anda:**
 
@@ -21,7 +21,7 @@ Anda sekarang memiliki fork Laravel-Excel versi 2.1.0 yang sudah:
 {
     "require": {
         "php": ">=7.0.0",
-        "maatwebsite/excel": "2.1.0-php74"
+        "maatwebsite/excel": "dev-php74-fix-2.1 as 2.1.0"
     },
     "repositories": [
         {
@@ -32,12 +32,15 @@ Anda sekarang memiliki fork Laravel-Excel versi 2.1.0 yang sudah:
 }
 ```
 
+**Penjelasan:** `dev-php74-fix-2.1 as 2.1.0` berarti menggunakan branch `php74-fix-2.1` tapi diperlakukan sebagai versi `2.1.0`
+
 **2. Install/Update:**
 ```bash
+composer clear-cache
 composer update maatwebsite/excel
 ```
 
-### Opsi B: Menggunakan Branch
+### Opsi B: Menggunakan Branch Langsung
 
 **composer.json:**
 ```json
@@ -122,8 +125,8 @@ git push origin 1.8.2-php74
 ```json
 {
     "require": {
-        "maatwebsite/excel": "2.1.0-php74",
-        "phpoffice/phpexcel": "dev-php74-fix"
+        "maatwebsite/excel": "dev-php74-fix-2.1 as 2.1.0",
+        "phpoffice/phpexcel": "dev-php74-fix as 1.8.2"
     },
     "repositories": [
         {

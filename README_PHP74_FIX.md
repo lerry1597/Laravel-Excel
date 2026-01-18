@@ -104,11 +104,11 @@ Repository ini adalah **Laravel-Excel 2.1** yang sudah di-verify clean dari curl
 
 ### 1. Update composer.json di Project Laravel Anda
 
-**Menggunakan branch tertentu:**
+**Menggunakan branch dengan alias (Recommended):**
 ```json
 {
     "require": {
-        "maatwebsite/excel": "dev-php74-fix-2.1"
+        "maatwebsite/excel": "dev-php74-fix-2.1 as 2.1.0"
     },
     "repositories": [
         {
@@ -119,11 +119,11 @@ Repository ini adalah **Laravel-Excel 2.1** yang sudah di-verify clean dari curl
 }
 ```
 
-**Menggunakan versi specific:**
+**Menggunakan branch langsung:**
 ```json
 {
     "require": {
-        "maatwebsite/excel": "2.1.0-php74"
+        "maatwebsite/excel": "dev-php74-fix-2.1"
     },
     "repositories": [
         {
